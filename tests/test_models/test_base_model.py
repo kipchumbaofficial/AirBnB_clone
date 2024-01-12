@@ -4,19 +4,30 @@
 """
 from models.base_model import BaseModel
 import unittest
+from datetime import datetime
 
 
 class TestBaseModel(unittest.TestCase):
     """TestBaseModel
         BaseModel BaseClass
     """
+
     def setUp(self):
         """Test setUp function to be executed before each test"""
-        self.test_object = BaseModel()
+        self.test_obj = BaseModel()
 
     def test_id(self):
         """Tests if id is converted to a string"""
-        self.assertEqual(type(self.test_object.id), str)
+        self.assertEqual(type(self.test_obj.id), str)
+
+    def test_created_at(self):
+        """Checks if created_at is an instance of datetime"""
+        self.assertTrue(isinstance(self.test_obj.created_at, datetime))
+
+    def test_updated_at(self):
+        """Checks if updated_at is an instance of datetime"""
+        self.assertTrue(isinstance(self.test_obj.updated_at, datetime))
+
 
 if __name__ == "__main__":
     unittest.main()

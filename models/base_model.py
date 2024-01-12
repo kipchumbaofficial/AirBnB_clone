@@ -15,14 +15,14 @@ class BaseModel:
     """
     def __init__(self, *args, **kwargs):
         """Initializes instance atrributes"""
+        if args:
+            pass
         if kwargs:
             date_format = "%Y-%m-%dT%H:%M:%S.%f"
             kwargs.pop('__class__', None)
-            creation_date = kwargs.get('created_at')
-            kwargs['created_at'] = datetime.strptime(creation_date, date_format)
-            updating_date = kwargs.get('updated_at')
-            kwargs['updated_at'] = datetime.strptime(updating_date, date_format)
             for key, value in kwargs.items():
+                if key in ['created_at', 'updated_at']:
+                    value = datetime.strptime(value, date_format)
                 setattr(self, key, value)
         else:
             self.id = str(uuid.uuid4())
