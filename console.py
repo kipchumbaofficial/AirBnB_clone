@@ -20,6 +20,14 @@ class HBNBCommand(cmd.Cmd):
         super().__init__()
         self.prompt = "(hbnb) "
 
+    def do_quit(self, arg):
+        """Exits the console"""
+        return True
+
+    def do_EOF(self, arg):
+        """Handles End of file/ Exits the console"""
+        return True
+
     def emptyline(self):
         """Overrides emptyline so as to do nothing"""
         pass
@@ -78,23 +86,15 @@ class HBNBCommand(cmd.Cmd):
                 print("** no instance found **")
 
     def do_all(self, arg):
+        """Prints a List of all objects"""
         list_all = []
         if arg:
             arguments = arg.split()
             if argument[0] not in class_list:
                 print("** class doesn't exist **")
         for key, value in storage.all().items():
-            list_all.append(value)
+            list_all.append(str(value))
         print(list_all)
-
-    def do_quit(self, arg):
-        """Quit command exits the command interpreter"""
-        return True
-
-    def do_EOF(self, arg):
-        """Handles End-Of-File"""
-        print()
-        return True
 
 
 if __name__ == '__main__':
