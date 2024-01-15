@@ -98,6 +98,7 @@ class HBNBCommand(cmd.Cmd):
             arguments = arg.split()
             if arguments[0] not in class_list:
                 print("** class doesn't exist **")
+                return
         for key, value in storage.all().items():
             list_all.append(str(value))
         print(list_all)
