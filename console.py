@@ -95,6 +95,7 @@ class HBNBCommand(cmd.Cmd):
         print(list_all)
 
     def do_update(self, arg):
+        """Udates an instance based on class and id"""
         words = arg.split()
         if len(words) == 0:
             print("** class name missing **")
@@ -117,7 +118,6 @@ class HBNBCommand(cmd.Cmd):
                 print("** instance id missing **")
         else:
             print("** class doesn't exist **")
-
 
 
 if __name__ == '__main__':
