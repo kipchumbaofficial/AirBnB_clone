@@ -5,6 +5,7 @@
 import json
 from models import base_model, user, state, city, amenity, place, review
 import os
+import copy
 
 BaseModel = base_model.BaseModel
 User = user.User
@@ -39,7 +40,8 @@ class FileStorage:
         """JSON Encoder"""
         dict_from = {}
         for key, value in FileStorage.__objects.items():
-            dict_from[key] = value.to_dict()
+            value_copy = copy.deepcopy(value)
+            dict_from[key] = value_copy.to_dict()
         json_str = json.dumps(dict_from)
         path = FileStorage.__file_path
         with open(path, "w", encoding="utf-8") as file_to:
