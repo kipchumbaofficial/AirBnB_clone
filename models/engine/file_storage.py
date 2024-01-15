@@ -3,10 +3,11 @@
     A module to Handle JSON Serialization & Deserialization
 """
 import json
-from models import base_model
+from models import base_model, user
 import os
 
 BaseModel = base_model.BaseModel
+User = user.User
 
 
 class FileStorage:
