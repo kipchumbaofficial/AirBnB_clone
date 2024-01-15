@@ -15,7 +15,8 @@ from models.review import Review
 
 
 class_list = {'BaseModel': BaseModel, 'User': User, 'Place': Place,
-             'Amenity': Amenity, 'City': City, 'State': State, 'Review': Review}
+              'City': City, 'Amenity': Amenity,
+              'State': State, 'Review': Review}
 
 
 class HBNBCommand(cmd.Cmd):

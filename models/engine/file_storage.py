@@ -15,7 +15,7 @@ Place = place.Place
 Review = review.Review
 
 class_list = ['BaseModel', 'Review', 'City', 'State'
-             'Place', 'Amenity', 'User']
+              'Place', 'Amenity', 'User']
 
 
 class FileStorage:
