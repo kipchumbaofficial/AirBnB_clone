@@ -10,4 +10,4 @@ class City(BaseModel):
         Blueprint for a city
     """
     state_id = ""
-    name_id = ""
+    name = ""
