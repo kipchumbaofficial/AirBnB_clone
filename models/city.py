@@ -11,6 +11,3 @@ class City(BaseModel):
     """
     state_id = ""
     name_id = ""
-
-    def __init__(self):
-        super().__init__()

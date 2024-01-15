@@ -3,11 +3,19 @@
     A module to Handle JSON Serialization & Deserialization
 """
 import json
-from models import base_model, user
+from models import base_model, user, state, city, amenity, place, review
 import os
 
 BaseModel = base_model.BaseModel
 User = user.User
+State = state.State
+Amenity = amenity.Amenity
+City = city.City
+Place = place.Place
+Review = review.Review
+
+class_list = ['BaseModel', 'Review', 'City', 'State'
+             'Place', 'Amenity', 'User']
 
 
 class FileStorage:
@@ -48,7 +56,7 @@ class FileStorage:
             dict_to = json.load(file_from)
             for key, value in dict_to.items():
                 class_name = key.split(".")[0]
-                if class_name == "BaseModel":
+                if class_name in class_list:
                     FileStorage.__objects[key] = eval(class_name)(**value)
                 else:
                     pass

@@ -10,6 +10,3 @@ class Amenity(BaseModel):
         Amenities available
     """
     name = ""
-
-    def __init__(self):
-        super().__init__()

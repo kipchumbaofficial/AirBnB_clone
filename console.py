@@ -7,9 +7,15 @@ import json
 from models import storage
 from models.base_model import BaseModel
 from models.user import User
+from models.place import Place
+from models.amenity import Amenity
+from models.city import City
+from models.state import State
+from models.review import Review
 
 
-class_list = {'BaseModel': BaseModel, 'User': User}
+class_list = {'BaseModel': BaseModel, 'User': User, 'Place': Place,
+             'Amenity': Amenity, 'City': City, 'State': State, 'Review': Review}
 
 
 class HBNBCommand(cmd.Cmd):

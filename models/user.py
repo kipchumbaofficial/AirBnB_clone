@@ -13,7 +13,3 @@ class User(BaseModel):
     password = ""
     first_name = ""
     last_name = ""
-
-    def __init__(self):
-        """Does initialization of base class"""
-        super().__init__()
