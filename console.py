@@ -15,10 +15,7 @@ class HBNBCommand(cmd.Cmd):
     """HBNBCommand class
         Command interpreter class for AirBnB clone
     """
-    def __init__(self):
-        """Initialize instance variables"""
-        super().__init__()
-        self.prompt = "(hbnb) "
+    prompt = "(hbnb) "
 
     def do_quit(self, arg):
         """Exits the console"""
@@ -26,6 +23,7 @@ class HBNBCommand(cmd.Cmd):
 
     def do_EOF(self, arg):
         """Handles End of file/ Exits the console"""
+        print()
         return True
 
     def emptyline(self):
@@ -95,6 +93,31 @@ class HBNBCommand(cmd.Cmd):
         for key, value in storage.all().items():
             list_all.append(str(value))
         print(list_all)
+
+    def do_update(self, arg):
+        words = arg.split()
+        if len(words) == 0:
+            print("** class name missing **")
+            return False
+        if words[0] in class_list:
+            if len(words) > 1:
+                key = words[0] + '.' + words[1]
+                if key in storage.all():
+                    if len(words) > 2:
+                        if len(words) > 3:
+                            setattr(storage.all()[key], words[2], words[3])
+                            storage.all()[key].save()
+                        else:
+                            print("** value missing **")
+                    else:
+                        print("** attribute name missing **")
+                else:
+                    print("** no instance found **")
+            else:
+                print("** instance id missing **")
+        else:
+            print("** class doesn't exist **")
+
 
 
 if __name__ == '__main__':
