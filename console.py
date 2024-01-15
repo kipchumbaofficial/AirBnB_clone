@@ -59,7 +59,7 @@ class HBNBCommand(cmd.Cmd):
                 raise ValueError("** class name missing **")
             else:
                 arguments = arg.split()
-                if len(arguments) < 2:
+                if len(arguments) != 2:
                     raise ValueError("** instance id missing **")
                 elif arguments[0] not in class_list:
                     raise ValueError("** class doesn't exist **")
@@ -79,7 +79,7 @@ class HBNBCommand(cmd.Cmd):
             print("** class name missing **")
         else:
             arguments = arg.split()
-            if len(arguments) < 2:
+            if len(arguments) != 2:
                 print("** instance id missing **")
             elif arguments[0] not in class_list:
                 print("** class doesn't exist **")
