@@ -28,6 +28,14 @@ class TestBaseModel(unittest.TestCase):
         """Checks if updated_at is an instance of datetime"""
         self.assertTrue(isinstance(self.test_obj.updated_at, datetime))
 
+    def test___str__(self):
+        """Tests __str__ of base clase"""
+        pass
+
+    def test_to_dict(self):
+        """Test to_dict"""
+        pass
+
 
 if __name__ == "__main__":
     unittest.main()
