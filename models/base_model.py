@@ -44,7 +44,11 @@ class BaseModel:
         """Returns a dictionary
             Containing all key/values of __dict__ of instance
         """
-        self.__dict__['created_at'] = self.created_at.isoformat()
-        self.__dict__['updated_at'] = self.updated_at.isoformat()
-        self.__dict__['__class__'] = type(self).__name__
-        return self.__dict__
+        retval = {}
+        for key, value in self.__dict__.items():
+            if key in ['created_at', 'updated_at']:
+                retval[key] = value.isoformat()
+            else:
+                retval[key] = value
+        retval['__class__'] = type(self).__name__
+        return retval
