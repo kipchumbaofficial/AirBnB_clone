@@ -30,7 +30,8 @@ class TestBaseModel(unittest.TestCase):
 
     def test___str__(self):
         """Tests __str__ of base clase"""
-        pass
+        result = str(self.test_obj)
+        self.assertTrue(result[:11] == '[BaseModel]')
 
     def test_to_dict(self):
         """Test to_dict"""
