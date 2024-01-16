@@ -34,7 +34,9 @@ class TestBaseModel(unittest.TestCase):
 
     def test_to_dict(self):
         """Test to_dict"""
-        pass
+        result = self.test_obj.to_dict()
+        self.assertTrue('created_at' in result)
+        self.assertTrue(isinstance(result['created_at'], str))
 
 
 if __name__ == "__main__":
