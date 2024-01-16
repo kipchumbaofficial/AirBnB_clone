@@ -38,6 +38,11 @@ class TestBaseModel(unittest.TestCase):
         self.assertTrue('created_at' in result)
         self.assertTrue(isinstance(result['created_at'], str))
 
+    def test_save(self):
+        """Test Save method"""
+        self.test_obj.save()
+        self.assertNotEqual(self.test_obj.created_at, self.test_obj.updated_at)
+
 
 if __name__ == "__main__":
     unittest.main()
