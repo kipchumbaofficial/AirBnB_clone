@@ -42,6 +42,7 @@ class TestBaseModel(unittest.TestCase):
     def test_save(self):
         """Test Save method"""
         self.test_obj.save()
+        self.assertGreater(datetime.now(), self.test_obj.updated_at)
         self.assertNotEqual(self.test_obj.created_at, self.test_obj.updated_at)
 
 
