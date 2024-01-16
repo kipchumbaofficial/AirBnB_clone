@@ -19,3 +19,9 @@ class TestFileStorage(unittest.TestCase):
         """Tests File path atribute"""
         path = storage._FileStorage__file_path
         self.assertTrue(isinstance(path, str))
+        self.assertTrue(path == 'file.json')
+
+    def test___object(self):
+        """Tests Object attribute"""
+        dict_obj = storage._FileStorage__objects
+        self.assertTrue(isinstance(dict_obj, dict))
