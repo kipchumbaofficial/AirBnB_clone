@@ -14,6 +14,7 @@ class TestFileStorage(unittest.TestCase):
     def setUp(self):
         """Prepares for test"""
         self.test_obj = BaseModel()
+        self.dict_obj = storage._FileStorage__objects
 
     def test___file_path(self):
         """Tests File path atribute"""
@@ -23,5 +24,12 @@ class TestFileStorage(unittest.TestCase):
 
     def test___object(self):
         """Tests Object attribute"""
-        dict_obj = storage._FileStorage__objects
-        self.assertTrue(isinstance(dict_obj, dict))
+        self.assertTrue(isinstance(self.dict_obj, dict))
+
+    def test_all(self):
+        """Tests all() method"""
+        retval = storage.all()
+        self.assertTrue(retval == self.dict_obj)
+
+    def test_new(self):
+        """Tests new() method
