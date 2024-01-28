@@ -131,3 +131,55 @@ div.locations:hover ul {
 .price_by_night p {
     align-self: center;
 }
+
+/* information */
+
+.information {
+    height: 80px;
+    border-top: 1px solid #DDDDDD;
+    border-bottom: 1px solid #DDDDDD;
+    margin-top: 35px;;
+}
+
+div.information p{
+    margin-top: 60px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.max_guest, .number_rooms, .number_bathrooms{
+    width: 100px;
+    height: 60px;
+    display: inline-block;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.max_guest {
+    background-image: url("../images/icon_group.png");
+}
+.number_rooms {
+    background-image: url("../images/icon_bed.png");
+}
+.number_bathrooms {
+    background-image: url("../images/icon_bath.png");
+}
+
+div.user {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+div.description {
+    margin-top: -7px;
+    text-align: left;
+}
+div.clearfix {
+    clear: both;
+}
+footer {
+    display: none;
+}

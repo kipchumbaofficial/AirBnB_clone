@@ -62,73 +62,19 @@
                         <div class="number_bathrooms">
                             <p>1 Bathroom</p>
                         </div>
-                    </div>
-                    <div class="user">
-                        <p><strong>Owner</strong>: Travis Escot</p>
-                    </div>
-                    <div class="description">
-                        <p>
-                            Welcome to our cozy and intimate Airbnb retreat! Our charming accomodation features a single
-                            bedroom and a well-appointed bathroom, creating the perfecr space for a couple gataway or solo
-                            traveller seeking comfort and privacy.
-                        </p>
-                    </div>
                 </article>
                 <article>
                     <h2>Cool Home</h2>
                     <div class="price_by_night">
                         <p>160$</p>
                     </div>
-                       <div class="information">
-                         <div class="max_guest">
-                              <p>3 Guests</p>
-                         </div>
-                         <div class="number_rooms">
-                             <p>3 Bed</p>
-                         </div>
-                         <div class="number_bathrooms">
-                             <p>3 Bathroom</p>
-                         </div>
-                     </div>
-                     <div class="user">
-                         <p><strong>Owner</strong>: Travis Escot</p>
-                     </div>
-                     <div class="description">
-                         <p>
-                             Welcome to our cozy and intimate Airbnb retreat! Our charming accomodation features a single
-                             bedroom and a well-appointed bathroom, creating the perfecr space for a couple gataway or solo
-                             traveller seeking comfort and privacy.
-                         </p>
-                     </div>
                 </article>
                 <article>
                     <h2>Wood House</h2>
                     <div class="price_by_night">
                         <p>150$</p>
                     </div>
-                       <div class="information">
-                         <div class="max_guest">
-                              <p>2 Guests</p>
-                          </div>
-                         <div class="number_rooms">
-                             <p>1 Bed</p>
-                         </div>
-                         <div class="number_bathrooms">
-                             <p>1 Bathroom</p>
-                         </div>
-                     </div>
-                     <div class="user">
-                         <p><strong>Owner</strong>: Travis Escot</p>
-                     </div>
-                     <div class="description">
-                         <p>
-                             Welcome to our cozy and intimate Airbnb retreat! Our charming accomodation features a single
-                             bedroom and a well-appointed bathroom, creating the perfecr space for a couple gataway or solo
-                             traveller seeking comfort and privacy.
-                         </p>
-                     </div>
                 </article>
-                <div class="clearfix"></div>
             </section>
         </div>
         <footer>
