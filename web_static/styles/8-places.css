@@ -97,6 +97,7 @@ div.locations:hover ul {
 .places h1 {
     font-size: 30px;
     margin-bottom: 2px;
+    text-align: left;
 }
 
 .places article {
